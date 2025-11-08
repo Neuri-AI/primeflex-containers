@@ -1,19 +1,7 @@
 {
-  "name": "@neuri/primeflex-containers",
+  "name": "@neuri_ai/primeflex-containers",
   "version": "1.0.0",
   "description": "Simple and lightweight container-fluid classes compatible with PrimeFlex",
-  "main": "dist/primeflex-containers.css",
-  "types": "",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "scripts": {
-    "build:css": "sass src/containers.scss dist/primeflex-containers.css --no-source-map",
-    "build:min": "csso dist/primeflex-containers.css --output dist/primeflex-containers.min.css",
-    "build": "npm run build:css && npm run build:min",
-    "prepublishOnly": "npm run build"
-  },
   "keywords": [
     "primeflex",
     "primeflex-containers",
@@ -24,15 +12,65 @@
     "css",
     "neuri"
   ],
-  "author": "Neuri",
+  "homepage": "https://github.com/Neuri-AI/primeflex-containers#readme",
+  "bugs": {
+    "url": "https://github.com/Neuri-AI/primeflex-containers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neuri-AI/primeflex-containers.git"
+  },
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
+  "author": "Neuri",
+  "type": "commonjs",
+  "main": "dist/primeflex-containers.css",
+  "types": "",
+  "directories": {
+    "example": "examples"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/containers.scss dist/primeflex-containers.css --no-source-map",
+    "build:min": "csso dist/primeflex-containers.css --output dist/primeflex-containers.min.css",
+    "build": "npm run build:css && npm run build:min",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "ansi-colors": "^4.1.3",
+    "anymatch": "^3.1.3",
+    "binary-extensions": "^2.3.0",
+    "braces": "^3.0.3",
+    "chokidar": "^3.6.0",
+    "clap": "^3.1.1",
+    "css-tree": "^2.2.1",
+    "detect-libc": "^1.0.3",
+    "fill-range": "^7.1.1",
+    "fsevents": "^2.3.3",
+    "glob-parent": "^5.1.2",
+    "immutable": "^5.1.4",
+    "is-binary-path": "^2.1.0",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "mdn-data": "^2.0.28",
+    "micromatch": "^4.0.8",
+    "node-addon-api": "^7.1.1",
+    "normalize-path": "^3.0.0",
+    "picomatch": "^2.3.1",
+    "readdirp": "^4.1.2",
+    "source-map-js": "^1.2.1",
+    "to-regex-range": "^5.0.1"
   },
   "devDependencies": {
     "csso": "^6.0.0",
     "csso-cli": "^4.0.2",
     "sass": "^1.87.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
