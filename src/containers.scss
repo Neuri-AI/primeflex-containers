@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "./reset" as *;
+@use "./_variables" as *;
+@use "./_mixins" as *;
+
+
+.container,
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-x;
+  padding-right: $container-padding-x;
+}
+
+// .container-fluid siempre 100%
+.container-fluid {
+  max-width: 100%;
+}
+
+// .container con max-width responsivo
+.container {
+  @each $key, $value in $breakpoints {
+    $max: container-max($key);
+
+    @if $max != null {
+      @include mq($key) {
+        max-width: $max;
+      }
+    }
+  }
+}

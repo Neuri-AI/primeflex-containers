@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "./_variables" as *;
+
+// Retorna el valor del breakpoint
+@function bp($key) {
+  @if map.has-key($breakpoints, $key) {
+    @return map.get($breakpoints, $key);
+  }
+  @error "Breakpoint `#{$key}` not found in $breakpoints map.";
+}
+
+@function container-max($key) {
+  @if map.has-key($container-max-widths, $key) {
+    @return map.get($container-max-widths, $key);
+  }
+  @return null;
+}
+
+@mixin mq($key) {
+  @media (min-width: bp($key)) {
+    @content;
+  }
+}

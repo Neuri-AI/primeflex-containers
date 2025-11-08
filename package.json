@@ -1,0 +1,38 @@
+{
+  "name": "@neuri/primeflex-containers",
+  "version": "1.0.0",
+  "description": "Simple and lightweight container-fluid classes compatible with PrimeFlex",
+  "main": "dist/primeflex-containers.css",
+  "types": "",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/containers.scss dist/primeflex-containers.css --no-source-map",
+    "build:min": "csso dist/primeflex-containers.css --output dist/primeflex-containers.min.css",
+    "build": "npm run build:css && npm run build:min",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "primeflex",
+    "primeflex-containers",
+    "container",
+    "container-fluid",
+    "responsive",
+    "scss",
+    "css",
+    "neuri"
+  ],
+  "author": "Neuri",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "csso": "^6.0.0",
+    "csso-cli": "^4.0.2",
+    "sass": "^1.87.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
